@@ -27,21 +27,15 @@
             .border-dark-grey{
                 color: #222222;
             }
-            .size-s {
+            .size-box {
                 width: 30px;
                 height: 30px;
+                background-color: white;
                 border: 1px solid #888888;
                 text-align: center;
+                margin-right: 6px;
                 font-size: x-small;
             } 
-            .size-others{
-                width: 30px;
-                height: 30px;
-                border: 1px solid #888888;
-                margin-left: 4px;
-                text-align: center;
-                font-size: x-small;
-            }
         </style>
     </head>
     <body>
@@ -52,7 +46,7 @@
         </nav>
       </div>
 
-        <div class="container" style="width: 1000px;">
+        <div class="container">
             <div class="row">
                 <div class="col-sm-6">
                     <img src="./img/classic-tee.jpg" alt="Product Photo" style="height: 40pc;">
@@ -64,30 +58,22 @@
                     <hr />
                     <p class="border-light-grey">This short sleeve t-shirt is crafted from a super soft combed cotton jersey and is printed with our logo on the chest. Pre-washed for an ultra-soft feel and to prevent shrinkage.</p>
                     <br />
-                    <p>SIZE*</p>
+                    <p id="size">SIZE*</p>
                     <div class="container" style="display:table-row-group;" >                   
                         <div class="row">
                             <div class="col-sm-2">
-                                <p class="size-s" id="size-s" onclick="mOnclick(this)">S
-                                    <script>
-                                        function mOnclick(id) {
-                                            id.style.border="2px solid #000000";
-                                            id.style.color = "#000000";
-                                        }
-                                        </script>   
-                                
-                                </p>
+                                <button class="size-box" id="size-s" onclick="mOnclick(this,'S')">S</button>
                             </div>
                             <div class="col-sm-2">
-                                <p class="size-others" id="size-m">M</p>
+                                <button class="size-box" id="size-m" onclick="mOnclick(this,'M')">M</button>
                             </div>
                             <div class="col-sm-2">
-                                <p class="size-others" id="size-l">L</p>
+                                <button class="size-box" id="size-l" onclick="mOnclick(this,'L')">L</button>
                             </div>
                         </div> 
                     </div>
-                    <div id="add-to-cart">
-                    <button style="border: 2px solid #222222; text-align: center; width: 150px;" onmouseover="mOver(this)" onmouseout="mOut(this)">ADD TO CART
+                    <div id="add-to-cart" style="margin-top: 5px;">
+                    <button style="border: 2px solid #222222; background-color: white; text-align: center; width: 150px;" onmouseover="mOver(this)" onmouseout="mOut(this)">ADD TO CART
                         <script>
                             function mOver(id) {
                                 id.style.backgroundColor="#000000";
@@ -105,5 +91,12 @@
                 </div>
             </div>
         </div>
+        <script>
+            function mOnclick(id,size) {
+                id.style.border="2px solid #000000";
+                id.style.color = "#000000";
+                document.querySelector("#size").textContent = "SIZE* " + size;
+            }
+        </script> 
     </body>
 </html>
