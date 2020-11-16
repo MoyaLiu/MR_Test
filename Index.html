@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>MR_test</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+        <style>
+            .header-ground{
+                background-color: #F6F6F7;
+                color: #888888;
+                font-family: 'Times New Roman', Times, serif;
+                align-content: center;
+            }
+            .font-color-dark{
+                color: #222222;
+            }
+            .font-color-light{
+                color: #888888;
+            }
+            .border-light-grey{
+                color: #cccccc;
+                font-family:Arial, Helvetica, sans-serif;
+            }
+            .border-dark-grey{
+                color: #222222;
+            }
+            .size-s {
+                width: 30px;
+                height: 30px;
+                border: 1px solid #888888;
+                text-align: center;
+                font-size: x-small;
+            } 
+            .size-others{
+                width: 30px;
+                height: 30px;
+                border: 1px solid #888888;
+                margin-left: 4px;
+                text-align: center;
+                font-size: x-small;
+            }
+        </style>
+    </head>
+    <body>
+
+    <div class="container">
+        <nav class="navbar navbar-expand-xl navbar-light bg-light text-right">
+            <h6 class="header-ground" style="height: 30px; text-align:right;">My Cart (4)</h6>  
+        </nav>
+      </div>
+
+        <div class="container" style="width: 1000px;">
+            <div class="row">
+                <div class="col-sm-6">
+                    <img src="./img/classic-tee.jpg" alt="Product Photo" style="height: 40pc;">
+                </div>
+                <div class="col-sm-6">
+                    <h2 style="font-weight: light;">Classic Tee</h2>
+                    <hr />
+                    <p style="font-weight: bold;">$75.00</p>
+                    <hr />
+                    <p class="border-light-grey">This short sleeve t-shirt is crafted from a super soft combed cotton jersey and is printed with our logo on the chest. Pre-washed for an ultra-soft feel and to prevent shrinkage.</p>
+                    <br />
+                    <p>SIZE*</p>
+                    <div class="container" style="display:table-row-group;" >                   
+                        <div class="row">
+                            <div class="col-sm-2">
+                                <p class="size-s" id="size-s" onclick="mOnclick(this)">S
+                                    <script>
+                                        function mOnclick(id) {
+                                            id.style.border="2px solid #000000";
+                                            id.style.color = "#000000";
+                                        }
+                                        </script>   
+                                
+                                </p>
+                            </div>
+                            <div class="col-sm-2">
+                                <p class="size-others" id="size-m">M</p>
+                            </div>
+                            <div class="col-sm-2">
+                                <p class="size-others" id="size-l">L</p>
+                            </div>
+                        </div> 
+                    </div>
+                    <div id="add-to-cart">
+                    <button style="border: 2px solid #222222; text-align: center; width: 150px;" onmouseover="mOver(this)" onmouseout="mOut(this)">ADD TO CART
+                        <script>
+                            function mOver(id) {
+                                id.style.backgroundColor="#000000";
+                                id.style.color = "#ffffff";
+                            }
+                            
+                            function mOut(id) {
+                                id.style.backgroundColor="#ffffff";
+                                id.style.color = "#000000";
+                            }
+                            </script>
+                    </button>
+
+                </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
